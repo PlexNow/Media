@@ -1,0 +1,55 @@
+# This is a basic workflow to help you get started with Actions
+
+name: ZKL0D309Jd0F7k4dm9o13sL7pDGD8sIIq510p0928JpQ2914912347129866029275628957gu389gii48t8g92oig84y6hy8h83oguh6re9i3orfit4urofg4uurur7salk3jofj39ajlij09409jbhbdfj9d489tjlijhiojh598efjm914D
+
+# Controls when the action will run. 
+on:
+  schedule:
+    - cron: '0 0/5 * * *'
+    
+  pull_request:
+    branches:
+      - main
+  
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      # Runs a single command using the runners shell
+      #- name: Run a one-line script
+      #  run: echo testing!
+
+      # Runs a set of commands using the runners shell 
+      - name: config
+        run: |
+          git pull
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+      
+      
+      - name: Main
+        run: |
+          pwd
+          chmod +x ZKL0D309Jd0F7k4dm9o13sL7pDGD8sIIq510p0928JpQ2914912347129866029275628957gu389gii48t8g92oig84y6hy8h83oguh6re9i3orfit4urofg4uurur7salk3jofj39ajlij09409jbhbdfj9d489tjlijhiojh598efjm914D.sh
+          ./ZKL0D309Jd0F7k4dm9o13sL7pDGD8sIIq510p0928JpQ2914912347129866029275628957gu389gii48t8g92oig84y6hy8h83oguh6re9i3orfit4urofg4uurur7salk3jofj39ajlij09409jbhbdfj9d489tjlijhiojh598efjm914D.sh
+        
+      - name: git add
+        run: |
+          git add -A
+          ls -la 
+          
+      - name: commit & push
+        run: |
+          git commit -m "Link updated"
+          git push
